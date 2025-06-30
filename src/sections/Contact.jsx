@@ -6,7 +6,7 @@ const Contact = () => (
       Get In Touch
     </h2>
     <form
-      action="https://formspree.io/f/xqabnkwp" // Replace with your own
+      action="https://formspree.io/f/xqabnkwp" // my Auth code
       method="POST"
       className="max-w-xl mx-auto space-y-6"
       data-aos="fade-up"

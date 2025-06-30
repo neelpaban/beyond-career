@@ -1,10 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <nav className="fixed w-full top-0 z-30 bg-white/10 backdrop-blur-lg shadow-md text-white">
+    <nav
+      className={`fixed w-full top-0 z-30 transition-all duration-300 ${
+        isScrolled
+          ? 'bg-white/80 backdrop-blur-lg shadow-lg text-slate-900'
+          : 'bg-white/10 backdrop-blur-lg shadow-md text-white'
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="text-2xl font-extrabold tracking-wide uppercase text-amber-400">
