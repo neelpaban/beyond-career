@@ -19,7 +19,7 @@ npm run build
 
 ## 🌐 Deployment
 
-We recommend deploying this on [Vercel](https://vercel.com).
+-> Recommendation: deploy it on [Vercel](https://vercel.com).
 
 ## 📁 Project Structure
 
@@ -30,5 +30,3 @@ We recommend deploying this on [Vercel](https://vercel.com).
 ---
 Designed with ❤️ for the Beyond Career Web Developer Internship.
 # beyond_career
-# beyond_career
-# beyond-career
